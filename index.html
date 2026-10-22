@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>In Remembrance · S/Sgt Lawrence E. Simon · 427th BS, 303rd BG</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Special+Elite&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --od:#4a4d2e; --od-dk:#33361f; --od-lt:#6b6e45;
+  --khaki:#c3b28a; --khaki-lt:#ddd0ad;
+  --cream:#f4ecd8; --paper:#efe5cc; --ink:#2b2a22; --muted:#5f5b48;
+  --red:#8c2f24; --navy:#1f2f4a;
+  --stencil:"Black Ops One","Stencil","Stencil Std","Impact","Arial Black",sans-serif;
+  --type:"Special Elite","Courier Prime","Courier New",Courier,monospace;
+  --serif:"Libre Baskerville",Georgia,"Times New Roman",serif;
+}
+*{box-sizing:border-box}
+html{background:var(--od-dk)}
+body{margin:0;color:var(--ink);font-family:var(--serif);line-height:1.6;
+  background:
+   radial-gradient(ellipse at top, rgba(255,255,255,.05), transparent 60%),
+   repeating-linear-gradient(45deg, rgba(0,0,0,.035) 0 2px, transparent 2px 6px),
+   var(--od-dk);}
+a{color:var(--navy)}
+.wrap{max-width:980px;margin:0 auto;padding:28px 18px 60px}
+.sheet{background:var(--cream);
+  background-image:
+   radial-gradient(circle at 20% 10%, rgba(195,178,138,.25), transparent 40%),
+   radial-gradient(circle at 85% 80%, rgba(195,178,138,.22), transparent 45%);
+  box-shadow:0 18px 50px rgba(0,0,0,.45);border-radius:3px;overflow:hidden}
+
+/* HERO */
+.hero{background:linear-gradient(180deg,var(--od) 0%,var(--od-dk) 100%);color:var(--cream);
+  padding:44px 36px 36px;position:relative;text-align:center;border-bottom:6px solid var(--khaki)}
+.hero::before{content:"";position:absolute;inset:10px;border:1px dashed rgba(244,236,216,.35);pointer-events:none}
+.kicker{font-family:var(--type);letter-spacing:.25em;text-transform:uppercase;font-size:.82rem;color:var(--khaki-lt)}
+.roundel{width:140px;height:auto;margin:18px auto 8px;display:block;filter:drop-shadow(0 3px 4px rgba(0,0,0,.4))}
+h1{font-family:var(--stencil);font-weight:400;font-size:clamp(2.1rem,5.4vw,3.6rem);letter-spacing:.06em;margin:.15em 0 .05em;line-height:1.08}
+.rank{font-family:var(--stencil);font-size:1.15rem;letter-spacing:.3em;color:var(--khaki)}
+.unit{font-family:var(--type);font-size:1.02rem;margin-top:14px}
+.serial{display:inline-block;margin-top:16px;font-family:var(--type);background:var(--cream);color:var(--ink);
+  padding:5px 14px;border-radius:2px;letter-spacing:.18em;font-size:.92rem;box-shadow:inset 0 0 0 2px var(--khaki)}
+.wings{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:22px;color:var(--khaki);font-family:var(--type);font-size:.85rem;letter-spacing:.2em}
+.wings i{display:block;height:2px;width:90px;background:linear-gradient(90deg,transparent,var(--khaki))}
+.wings i:last-child{transform:scaleX(-1)}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:2px solid var(--khaki)}
+.stat{padding:18px 10px;text-align:center;border-right:1px dashed var(--khaki)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-family:var(--stencil);font-weight:400;font-size:1.9rem;color:var(--od);line-height:1.1}
+.stat span{font-family:var(--type);font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+
+section{padding:30px 40px;border-bottom:1px solid rgba(74,77,46,.18)}
+h2{font-family:var(--stencil);font-weight:400;letter-spacing:.08em;color:var(--od-dk);font-size:1.55rem;margin:0 0 14px;
+  display:flex;align-items:center;gap:12px}
+h2 .star{width:22px;height:22px;flex:0 0 22px}
+h2::after{content:"";flex:1;height:2px;background:repeating-linear-gradient(90deg,var(--khaki) 0 10px,transparent 10px 16px)}
+h3{font-family:var(--type);font-weight:400;font-size:1.1rem;margin:0 0 6px;color:var(--od-dk)}
+p{margin:.4em 0 .9em}
+.lede{font-size:1.08rem}
+.typed{font-family:var(--type)}
+
+/* Crew roster */
+.roster{display:grid;grid-template-columns:1fr 1fr;gap:10px 22px;list-style:none;padding:0;margin:8px 0 12px}
+.roster li{font-family:var(--type);padding:8px 12px;background:var(--paper);border-left:4px solid var(--od-lt);font-size:.95rem}
+.roster li small{display:block;color:var(--muted);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}
+.roster li.him{border-left-color:var(--red);background:#efe0c2}
+.roster li.raley{border-left-color:var(--navy)}
+.footnote{font-size:.88rem;color:var(--muted);font-style:italic}
+
+/* Queenie card */
+.card{display:grid;grid-template-columns:200px 1fr;gap:22px;background:var(--paper);border:1px solid var(--khaki);padding:20px;border-radius:2px}
+.plate{background:var(--od);color:var(--cream);text-align:center;padding:16px 8px;border-radius:2px;position:relative}
+.plate .nm{font-family:"Brush Script MT","Segoe Script",cursive;font-size:2.3rem;color:#f1d48a;line-height:1}
+.plate .code{font-family:var(--stencil);font-size:2rem;letter-spacing:.12em;margin-top:8px}
+.plate .sn{font-family:var(--type);font-size:.85rem;color:var(--khaki-lt);margin-top:4px}
+.plate .tri{width:46px;margin:10px auto 0;display:block}
+
+/* Timeline */
+.legend{font-family:var(--type);font-size:.85rem;color:var(--muted);margin-bottom:12px}
+.tl{list-style:none;margin:0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:19px;top:6px;bottom:6px;width:2px;background:repeating-linear-gradient(180deg,var(--od-lt) 0 6px,transparent 6px 10px)}
+.m{display:flex;gap:14px;padding:6px 0}
+.mdot{flex:0 0 40px;display:flex;justify-content:center}
+.mdot span{width:32px;height:32px;border-radius:50%;background:var(--cream);border:2px solid var(--od-lt);font-family:var(--type);font-size:.8rem;
+  display:flex;align-items:center;justify-content:center;position:relative;z-index:1}
+.m.hl .mdot span{background:var(--od);color:var(--cream);border-color:var(--khaki)}
+.mbody{flex:1;padding:6px 12px 8px;border-bottom:1px dotted rgba(74,77,46,.3)}
+.m.hl .mbody{background:rgba(195,178,138,.22);border-radius:2px}
+.mhead{display:flex;justify-content:space-between;gap:10px;font-family:var(--type)}
+.mdate{font-weight:700;color:var(--od-dk)}
+.mno{color:var(--muted);font-size:.85rem}
+.mtarget{font-size:.98rem}
+.mmeta{font-family:var(--type);font-size:.8rem;color:var(--muted)}
+.mnote{font-family:var(--type);font-size:.85rem;color:var(--red);margin-top:2px}
+.mnote::before{content:"★ "}
+
+/* Aircraft tags */
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 10px}
+.tag{font-family:var(--type);font-size:.9rem;padding:5px 11px;background:var(--od);color:var(--cream);border-radius:2px;border:1px solid var(--od-dk)}
+.tag small{color:var(--khaki-lt);margin-left:6px;font-size:.75rem}
+
+/* Remembrance */
+.remember{background:var(--navy);color:var(--cream);text-align:center;padding:34px 40px}
+.remember h2{color:var(--cream);justify-content:center}
+.remember h2::after{display:none}
+.remember p{max-width:640px;margin:.5em auto;font-style:italic}
+.remember .who{font-family:var(--type);font-style:normal;letter-spacing:.12em;color:var(--khaki-lt);font-size:.9rem}
+
+.note{background:#e9dcbc;border:1px dashed var(--od-lt);padding:16px 20px;font-size:.95rem}
+.sources ol{font-family:var(--type);font-size:.85rem;padding-left:20px;margin:0}
+.sources li{margin:6px 0;word-break:break-word}
+footer{text-align:center;font-family:var(--type);color:var(--khaki);font-size:.8rem;padding:22px 12px 0;letter-spacing:.1em}
+
+@media (max-width:720px){
+  section{padding:24px 20px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(-n+2){border-bottom:1px dashed var(--khaki)}
+  .roster{grid-template-columns:1fr}
+  .card{grid-template-columns:1fr}
+  .mhead{flex-direction:column;gap:0}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="star" viewBox="0 0 100 100"><polygon points="50,4 61,38 97,38 68,59 79,94 50,72 21,94 32,59 3,38 39,38" fill="currentColor"/></symbol>
+  </defs>
+</svg>
+<div class="wrap">
+<div class="sheet">
+
+<header class="hero">
+  <div class="kicker">In grateful remembrance</div>
+  <svg class="roundel" viewBox="0 0 260 120" role="img" aria-label="Star-and-bar style insignia">
+    <rect x="10" y="44" width="240" height="32" fill="#f4ecd8"/>
+    <rect x="14" y="48" width="232" height="24" fill="#8c2f24"/>
+    <rect x="10" y="40" width="240" height="4" fill="#1f2f4a"/><rect x="10" y="76" width="240" height="4" fill="#1f2f4a"/>
+    <circle cx="130" cy="60" r="56" fill="#1f2f4a"/>
+    <polygon fill="#f4ecd8" points="130,8 142.3,45.1 181.3,45.1 149.8,68.1 161.8,105.2 130,82.3 98.2,105.2 110.2,68.1 78.7,45.1 117.7,45.1"/>
+  </svg>
+  <div class="rank">STAFF SERGEANT</div>
+  <h1>LAWRENCE E. SIMON</h1>
+  <div class="unit">427th Bomb Squadron &nbsp;·&nbsp; 303rd Bomb Group (H) “Hell’s Angels” &nbsp;·&nbsp; Eighth Air Force</div>
+  <div class="serial">ASN 42045803</div>
+  <div class="wings"><i></i>RAF MOLESWORTH · 1944–1945<i></i></div>
+</header>
+
+<div class="stats">
+  <div class="stat"><b>32</b><span>Missions in group records</span></div>
+  <div class="stat"><b>35</b><span>Per 30 Dec 1944 crew photo</span></div>
+  <div class="stat"><b>GN-Q</b><span>Crew ship “Queenie”</span></div>
+  <div class="stat"><b>✓</b><span>Tour completed uninjured</span></div>
+</div>
+
+<section>
+  <h2><svg class="star"><use href="#star"/></svg>His Service</h2>
+  <p class="lede">Staff Sergeant Lawrence E. Simon flew as a <b>waist gunner</b> on B-17 Flying Fortresses with the <b>427th Bomb Squadron, 303rd Bomb Group</b>, Eighth Air Force, at Molesworth, England. The 303rd was known throughout the war as <b>“Hell’s Angels,”</b> a name it took from one of its own B-17s.</p>
+  <p>He joined the 427th on <b>17 August 1944</b> with the crew of <b>Lt (later Capt) George C. Newton</b>. Group mission reports list him on <b>32 combat missions between 30 August 1944 and 3 February 1945</b>; the crew photograph taken at Molesworth on 30 December 1944 records the completion of <b>35 missions</b>. His missions included support for Operation Market Garden, three trips to the oil refineries at Merseburg, Christmas Eve 1944, St. Vith during the Battle of the Bulge, and Berlin.</p>
+  <p>Through 8 January 1945 he is listed as waist gunner. On his later missions the reports list him as <b>toggler</b>, the crewman who released the bombs on the lead ship’s signal (and once, on 29 January 1945, in the bombardier position). According to the 303rd Bomb Group’s crew history, every man of the Newton crew except the co-pilot <b>completed his combat tour without injury</b>, Lawrence among them.</p>
+</section>
+
+<section>
+  <h2><svg class="star"><use href="#star"/></svg>The Newton Crew</h2>
+  <p class="typed" style="font-size:.9rem;color:var(--muted)">Crew formed May 1944 at Rapid City Army Air Base, South Dakota · Assigned 427th BS 17 Aug 1944 · Final ranks shown</p>
+  <ul class="roster">
+    <li>Capt George C. Newton<small>Pilot</small></li>
+    <li class="raley">2Lt Stonewall J. “Red” Raley<small>Co-pilot · killed 21 Nov 1944</small></li>
+    <li>1Lt John I. Jenkins<small>Navigator</small></li>
+    <li>1Lt Willard L. Lewis<small>Bombardier</small></li>
+    <li>T/Sgt Joseph R. Schneider<small>Engineer / top turret</small></li>
+    <li>T/Sgt Byron D. Corn<small>Radio operator</small></li>
+    <li>S/Sgt Samuel S. Hartog<small>Ball turret gunner</small></li>
+    <li>S/Sgt Leslie E. Karr<small>Tail gunner</small></li>
+    <li class="him">S/Sgt Lawrence E. Simon<small>Waist gunner</small></li>
+  </ul>
+  <p class="footnote">The crew flew their first 13 missions together, #234 (30 Aug 1944) through #253 (7 Oct 1944). Newton then became a lead-crew pilot; the officers flew as fill-ins with other pilots, while the enlisted men flew most of their remaining missions with Newton.</p>
+</section>
+
+<section>
+  <h2><svg class="star"><use href="#star"/></svg>“Queenie”</h2>
+  <div class="card">
+    <div class="plate">
+      <div class="nm">Queenie</div>
+      <div class="code">GN-Q</div>
+      <div class="sn">B-17G · 42-97281</div>
+      <svg class="tri" viewBox="0 0 60 52"><polygon points="30,2 58,50 2,50" fill="none" stroke="#ddd0ad" stroke-width="4"/><text x="30" y="44" text-anchor="middle" font-family="Black Ops One, Impact, sans-serif" font-size="24" fill="#ddd0ad">C</text></svg>
+    </div>
+    <div>
+      <p>The Newton crew’s B-17G <b>“Queenie,”</b> serial <b>42-97281</b>, squadron code <b>GN-Q</b>, flew 78 missions with the 427th.</p>
+      <p><b>16 November 1944, Mission #273 to Weisweiler:</b> bad weather diverted the returning bombers to RAF Sleap. Queenie was the 30th to land. With her brakes failing, Lt Newton tried to ground-loop her; her right wing struck a parked B-17 and she came to rest hub-deep in mud. <b>No one was injured.</b> She was dug out and returned to service, and Lawrence flew in her again at St. Vith on 3 January 1945.</p>
+      <p class="footnote">Queenie was later damaged on the 28 March 1945 Berlin mission and crash-landed near Sandwich, Kent, with another crew.</p>
+    </div>
+  </div>
+</section>
+
+<section class="remember">
+  <h2><svg class="star"><use href="#star"/></svg>Remembering “Red” Raley</h2>
+  <p>2nd Lieutenant Stonewall Jackson “Red” Raley flew as Lawrence’s co-pilot on 16 of his 23 missions. On 21 November 1944, flying with Lt Peter F. Cureton’s crew on the mission to the Leuna refinery at Merseburg, he was lost. He came safely to earth by parachute, and was killed on the ground.</p>
+  <p>Lawrence flew to Merseburg that same day with the Newton crew. Red Raley stands in the crew’s photograph as an inset, kept among the men he flew with.</p>
+  <p class="who">2LT STONEWALL J. RALEY · 21 NOVEMBER 1944</p>
+</section>
+
+<section>
+  <h2><svg class="star"><use href="#star"/></svg>Mission Timeline</h2>
+  <div class="legend">32 missions on which 303rd BG mission reports name Sgt / S/Sgt Lawrence E. Simon. Dates, targets, aircraft and pilots come from those reports. Highlighted entries are notable missions. The crew photo credits 35, so some missions are not shown here.</div>
+  <ol class="tl">
+<li class="m hl"><div class="mdot"><span>1</span></div><div class="mbody">
+<div class="mhead"><span class="mdate">30 Aug 1944</span><span class="mno">Mission #234</span></div>
+<div class="mtarget">“No Ball” V-1 launching sites, Pas de Calais, France</div>
+<div class="mmeta">B-17G <b>Betty Jane</b> · 42-32027 · Pilot: Newton · Waist gunner · <a href="https://www.303rdbg.com/missionreports/234.pdf">report</a></div>
+<div class="mnote">First mission</div></div></li>
+<li class="m"><div class="mdot"><span>2</span></div><div class="mbody">
+<div class="mhead"><span class="mdate">3 Sep 1944</span><span class="mno">Mission #235</span></div>
+<div class="mtarget">I.G. Farben plant, Ludwigshafen, Germany</div>
+<div class="mmeta">B-17G <b>Jigger Rooche II</b> · 43-38248 · Pilot: Newton · Waist gunner · <a href="https://www.303rdbg.com/missionreports/235.pdf">report</a></div>
+</div></li>
+<li class="m"><div class="mdot"><span>3</span></div><div class="mbody">
+<div class="mhead"><span class="mdate">5 Sep 1944</span><span class="mno">Mission #236</span></div>
+<div class="mtarget">I.G. Farben plant, Ludwigshafen, Germany</div>
+<div class="mmeta">B-17G <b>Miss Lace</b> · 42-102569 · Pilot: Newton · Waist gunner · <a href="https://www.303rdbg.com/missionreports/236.pdf">report</a></div>
+</div></li>
+<li class="m"><div class="mdot"><span>4</span></div><div class="mbody">
+<div class="mhead"><span class="mdate">8 Sep 1944</span><span class="mno">Mission #237</span></div>
+<div class="mtarget">I.G. Farben plant, Ludwigshafen, Germany</div>
+<div class="mmeta">B-17G <b>Full House</b> · 43-37666 · Pilot: Newton · Waist gunner · <a href="https://www.303rdbg.com/missionreports/237.pdf">report</a></div>
+</div></li>
+<li class="m"><div class="mdot"><span>5</span></div><div class="mbody">
+<div class="mhead"><span class="mdate">10 Sep 1944</span><span class="mno">Mission #239</span></div>
+<div class="mtarget">Marshalling yard, Stuttgart, Germany</div>
+<div class="mmeta">B-17G <b>(no name)</b> · 43-38197 · Pilot: Newton · Waist gunner · <a href="https://www.303rdbg.com/missionreports/239.pdf">report</a></div>
+</div></li>
+<li class="m"><div class="mdot"><span>6</span></div><div class="mbody">
+<div class="mhead"><span class="mdate">11 Sep 1944</span><span class="mno">Mission #240</span></div>
+<div class="mtarget">Synthetic oil plant, Lutzkendorf, near Halle, Germany</div>
+<div class="mmeta">B-17G <b>Miss Lace</b> · 42-102411 · Pilot: Newton · Waist gunner · <a href="https://www.303rdbg.com/missionreports/240.pdf">report</a></div>
+</div></li>
+<li class="m hl"><div class="mdot"><span>7</span></div><div class="mbody">
+<div class="mhead"><span class="mdate">17 Sep 1944</span><span class="mno">Mission #243</span></div>
+<div class="mtarget">Eindhoven and ’s-Hertogenbosch areas, The Netherlands</div>
+<div class="mmeta">B-17G <b>Miss Lace</b> · 42-102569 · Pilot: Newton · Waist gunner · <a href="https://www.303rdbg.com/missionreports/243.pdf">report</a></div>
+<div class="mnote">Operation Market Garden support</div></div></li>
+<li class="m"><div class="mdot"><span>8</span></div><div class="mbody">
+<div class="mhead"><span class="mdate">19 Sep 1944</span><span class="mno">Mission #244</span></div>
+<div class="mtarget">Marshalling yards, Osnabrück &amp; Hamm, Germany</div>
+<div class="mmeta">B-17G <b>Miss Lace</b> · 42-102569 · Pilot: Newton · Waist gunner · <a href="https://www.303rdbg.com/missionreports/244.pdf">report</a></div>
+</div></li>
+<li class="m"><div class="mdot"><span>9</span></div><div class="mbody">
+<div class="mhead"><span class="mdate">26 Sep 1944</span><span class="mno">Mission #246</span></div>
+<div class="mtarget">Marshalling yards, Osnabrück, Germany</div>
+<div class="mmeta">B-17G <b>Miss Lace</b> · 42-102569 · Pilot: Newton · Waist gunner · <a href="https://www.303rdbg.com/missionreports/246.pdf">report</a></div>
+</div></li>
+<li class="m"><div class="mdot"><span>10</span></div><div class="mbody">
+<div class="mhead"><span class="mdate">5 Oct 1944</span><span class="mno">Mission #251</span></div>
+<div class="mtarget">Ford Motor plant, Cologne, Germany</div>
+<div class="mmeta">B-17G <b>(no name)</b> · 43-38197 · Pilot: Newton · Waist gunner · <a href="https://www.303rdbg.com/missionreports/251.pdf">report</a></div>
+</div></li>
+<li class="m"><div class="mdot"><span>11</span></div><div class="mbody">
+<div class="mhead"><span class="mdate">6 Oct 1944</span><span class="mno">Mission #252</span></div>
+<div class="mtarget">Power plant, Stralsund, Germany</div>
+<div class="mmeta">B-17G <b>(no name)</b> · 43-38705 · Pilot: Newton · Waist gunner · <a href="https://www.303rdbg.com/missionreports/252.pdf">report</a></div>
+</div></li>
+<li class="m hl"><div class="mdot"><span>12</span></div><div class="mbody">
+<div class="mhead"><span class="mdate">7 Oct 1944</span><span class="mno">Mission #253</span></div>
+<div class="mtarget">Marshalling yards, Dresden, Germany</div>
+<div class="mmeta">B-17G <b>Shoo Shoo Baby</b> · 42-97311 · Pilot: Newton · Waist gunner · <a href="https://www.303rdbg.com/missionreports/253.pdf">report</a></div>
+<div class="mnote">Last of the crew’s first 13 together</div></div></li>
+<li class="m"><div class="mdot"><span>13</span></div><div class="mbody">
+<div class="mhead"><span class="mdate">9 Oct 1944</span><span class="mno">Mission #254</span></div>
+<div class="mtarget">Ball-bearing plant, Schweinfurt, Germany</div>
+<div class="mmeta">B-17G <b>The Red</b> · 44-6166 · Pilot: Newton · Waist gunner · <a href="https://www.303rdbg.com/missionreports/254.pdf">report</a></div>
+</div></li>
+<li class="m"><div class="mdot"><span>14</span></div><div class="mbody">
+<div class="mhead"><span class="mdate">2 Nov 1944</span><span class="mno">Mission #266</span></div>
+<div class="mtarget">Synthetic oil refinery, Sterkrade, Germany</div>
+<div class="mmeta">B-17G <b>Mercy’s Madhouse (PFF)</b> · 42-97557 · Pilot: Sheets · Waist gunner · <a href="https://www.303rdbg.com/missionreports/266.pdf">report</a></div>
+</div></li>
+<li class="m"><div class="mdot"><span>15</span></div><div class="mbody">
+<div class="mhead"><span class="mdate">10 Nov 1944</span><span class="mno">Mission #271</span></div>
+<div class="mtarget">Ostheim &amp; Butzweilerhof airfields, Cologne, Germany</div>
+<div class="mmeta">B-17G <b>(no name, PFF)</b> · 42-97691 · Pilot: Newton · Waist gunner · <a href="https://www.303rdbg.com/missionreports/271.pdf">report</a></div>
+</div></li>
+<li class="m hl"><div class="mdot"><span>16</span></div><div class="mbody">
+<div class="mhead"><span class="mdate">16 Nov 1944</span><span class="mno">Mission #273</span></div>
+<div class="mtarget">Ground-troop support, Weisweiler, Germany</div>
+<div class="mmeta">B-17G <b>Queenie</b> · 42-97281 · Pilot: Newton · Waist gunner · <a href="https://www.303rdbg.com/missionreports/273.pdf">report</a></div>
+<div class="mnote">Diverted to RAF Sleap; ground loop, no injuries</div></div></li>
+<li class="m"><div class="mdot"><span>17</span></div><div class="mbody">
+<div class="mhead"><span class="mdate">20 Nov 1944</span><span class="mno">Mission #274</span></div>
+<div class="mtarget">Buer synthetic oil refinery, Gelsenkirchen, Germany</div>
+<div class="mmeta">B-17G <b>50 Ragged</b> · 43-38621 · Pilot: Newton · Waist gunner · <a href="https://www.303rdbg.com/missionreports/274.pdf">report</a></div>
+</div></li>
+<li class="m hl"><div class="mdot"><span>18</span></div><div class="mbody">
+<div class="mhead"><span class="mdate">21 Nov 1944</span><span class="mno">Mission #275</span></div>
+<div class="mtarget">Leuna synthetic oil refinery, Merseburg, Germany</div>
+<div class="mmeta">B-17G <b>(no name, PFF)</b> · 44-8038 · Pilot: Newton · Waist gunner · <a href="https://www.303rdbg.com/missionreports/275.pdf">report</a></div>
+<div class="mnote">The day “Red” Raley was lost with the Cureton crew</div></div></li>
+<li class="m"><div class="mdot"><span>19</span></div><div class="mbody">
+<div class="mhead"><span class="mdate">26 Nov 1944</span><span class="mno">Mission #277</span></div>
+<div class="mtarget">Rail viaduct, Altenbeken &amp; marshalling yard, Osnabrück, Germany</div>
+<div class="mmeta">B-17G <b>50 Ragged</b> · 43-38621 · Pilot: Newton · Waist gunner · <a href="https://www.303rdbg.com/missionreports/277.pdf">report</a></div>
+</div></li>
+<li class="m"><div class="mdot"><span>20</span></div><div class="mbody">
+<div class="mhead"><span class="mdate">29 Nov 1944</span><span class="mno">Mission #279</span></div>
+<div class="mtarget">Synthetic oil refinery, Merseburg, Germany</div>
+<div class="mmeta">B-17G <b>50 Ragged</b> · 43-38621 · Pilot: Fletcher · Waist gunner · <a href="https://www.303rdbg.com/missionreports/279.pdf">report</a></div>
+</div></li>
+<li class="m"><div class="mdot"><span>21</span></div><div class="mbody">
+<div class="mhead"><span class="mdate">6 Dec 1944</span><span class="mno">Mission #283</span></div>
+<div class="mtarget">Leuna synthetic oil plant, Merseburg, Germany</div>
+<div class="mmeta">B-17G <b>(no name, PFF)</b> · 44-8038 · Pilot: Newton · Waist gunner · <a href="https://www.303rdbg.com/missionreports/283.pdf">report</a></div>
+</div></li>
+<li class="m"><div class="mdot"><span>22</span></div><div class="mbody">
+<div class="mhead"><span class="mdate">11 Dec 1944</span><span class="mno">Mission #285</span></div>
+<div class="mtarget">Railroad bridge, Mannheim, Germany</div>
+<div class="mmeta">B-17G <b>Sparky (PFF)</b> · 44-8125 · Pilot: Newton · Waist gunner · <a href="https://www.303rdbg.com/missionreports/285.pdf">report</a></div>
+</div></li>
+<li class="m hl"><div class="mdot"><span>23</span></div><div class="mbody">
+<div class="mhead"><span class="mdate">24 Dec 1944</span><span class="mno">Mission #290</span></div>
+<div class="mtarget">Landing ground, Merzhausen, near Frankfurt, Germany</div>
+<div class="mmeta">B-17G <b>(no name, PFF)</b> · 44-8038 · Pilot: Callahan · Waist gunner · <a href="https://www.303rdbg.com/missionreports/290.pdf">report</a></div>
+<div class="mnote">Christmas Eve 1944</div></div></li>
+<li class="m"><div class="mdot"><span>24</span></div><div class="mbody">
+<div class="mhead"><span class="mdate">29 Dec 1944</span><span class="mno">Mission #292</span></div>
+<div class="mtarget">Railroad bridge, Bullay, Germany</div>
+<div class="mmeta">B-17G <b>(no name, PFF)</b> · 44-8038 · Pilot: Newton · Waist gunner · <a href="https://www.303rdbg.com/missionreports/292.pdf">report</a></div>
+</div></li>
+<li class="m hl"><div class="mdot"><span>25</span></div><div class="mbody">
+<div class="mhead"><span class="mdate">3 Jan 1945</span><span class="mno">Mission #296</span></div>
+<div class="mtarget">Tactical target, St. Vith, Belgium</div>
+<div class="mmeta">B-17G <b>Queenie</b> · 42-97281 · Pilot: Newton · Waist gunner · <a href="https://www.303rdbg.com/missionreports/296.pdf">report</a></div>
+<div class="mnote">Battle of the Bulge</div></div></li>
+<li class="m hl"><div class="mdot"><span>26</span></div><div class="mbody">
+<div class="mhead"><span class="mdate">8 Jan 1945</span><span class="mno">Mission #299</span></div>
+<div class="mtarget">Transportation center, Schweich &amp; Mosel marshalling yard, Koblenz, Germany</div>
+<div class="mmeta">B-17G <b>The Red</b> · 44-6166 · Pilot: Newton · Waist gunner · <a href="https://www.303rdbg.com/missionreports/299.pdf">report</a></div>
+<div class="mnote">Last mission listed as waist gunner</div></div></li>
+<li class="m"><div class="mdot"><span>27</span></div><div class="mbody">
+<div class="mhead"><span class="mdate">21 Jan 1945</span><span class="mno">Mission #305</span></div>
+<div class="mtarget">Marshalling yard, Aschaffenburg, Germany</div>
+<div class="mmeta">B-17G <b>50 Ragged</b> · 43-38621 · Pilot: Wertz · Toggler · <a href="https://www.303rdbg.com/missionreports/305.pdf">report</a></div>
+</div></li>
+<li class="m"><div class="mdot"><span>28</span></div><div class="mbody">
+<div class="mhead"><span class="mdate">22 Jan 1945</span><span class="mno">Mission #306</span></div>
+<div class="mtarget">Synthetic oil plant, Sterkrade, Germany</div>
+<div class="mmeta">B-17G <b>Sweet Rose O’Grady</b> · 42-39885 · Pilot: Richter · Toggler · <a href="https://www.303rdbg.com/missionreports/306.pdf">report</a></div>
+</div></li>
+<li class="m"><div class="mdot"><span>29</span></div><div class="mbody">
+<div class="mhead"><span class="mdate">23 Jan 1945</span><span class="mno">Mission #307</span></div>
+<div class="mtarget">Railroad marshalling yard, Neuss, Germany</div>
+<div class="mmeta">B-17G <b>Miss Lace</b> · 42-102411 · Pilot: Richter · Toggler · <a href="https://www.303rdbg.com/missionreports/307.pdf">report</a></div>
+</div></li>
+<li class="m"><div class="mdot"><span>30</span></div><div class="mbody">
+<div class="mhead"><span class="mdate">29 Jan 1945</span><span class="mno">Mission #309</span></div>
+<div class="mtarget">Railroad marshalling yard, Siegen, Germany</div>
+<div class="mmeta">B-17G <b>Jigger Rooche II</b> · 43-38248 · Pilot: Demian · Bombardier slot · <a href="https://www.303rdbg.com/missionreports/309.pdf">report</a></div>
+</div></li>
+<li class="m"><div class="mdot"><span>31</span></div><div class="mbody">
+<div class="mhead"><span class="mdate">1 Feb 1945</span><span class="mno">Mission #310</span></div>
+<div class="mtarget">Railroad bridge, Mannheim, Germany</div>
+<div class="mmeta">B-17G <b>Sweet Rose O’Grady</b> · 42-39885 · Pilot: Richter · Toggler · <a href="https://www.303rdbg.com/missionreports/310.pdf">report</a></div>
+</div></li>
+<li class="m hl"><div class="mdot"><span>32</span></div><div class="mbody">
+<div class="mhead"><span class="mdate">3 Feb 1945</span><span class="mno">Mission #311</span></div>
+<div class="mtarget">Military objectives, Berlin, Germany</div>
+<div class="mmeta">B-17G <b>Sweet Rose O’Grady</b> · 42-39885 · Pilot: Richter · Toggler · <a href="https://www.303rdbg.com/missionreports/311.pdf">report</a></div>
+<div class="mnote">Berlin</div></div></li>
+  </ol>
+</section>
+
+<section>
+  <h2><svg class="star"><use href="#star"/></svg>The Fortresses He Flew</h2>
+  <p>Besides Queenie, mission reports place him aboard these named B-17Gs, along with several unnamed ones:</p>
+  <div class="tags">
+    <span class="tag">Queenie<small>42-97281</small></span>
+    <span class="tag">Betty Jane<small>42-32027</small></span>
+    <span class="tag">Miss Lace<small>42-102569 · 42-102411</small></span>
+    <span class="tag">50 Ragged<small>43-38621</small></span>
+    <span class="tag">Sweet Rose O’Grady<small>42-39885</small></span>
+    <span class="tag">Sparky<small>44-8125 · PFF</small></span>
+    <span class="tag">Shoo Shoo Baby<small>42-97311</small></span>
+    <span class="tag">Full House<small>43-37666</small></span>
+    <span class="tag">Jigger Rooche II<small>43-38248</small></span>
+    <span class="tag">The Red<small>44-6166</small></span>
+    <span class="tag">Mercy’s Madhouse<small>42-97557 · PFF</small></span>
+  </div>
+</section>
+
+<section>
+  <h2><svg class="star"><use href="#star"/></svg>A Note on “Hell’s Angels”</h2>
+  <div class="note">
+    <p>The famous B-17F <b>“Hell’s Angels”</b> (41-24577, VK-D) flew with the <b>358th Bomb Squadron</b> of the 303rd Bomb Group. On 13 May 1943 it became one of the first Eighth Air Force bombers to complete 25 missions, and the whole 303rd took its name. Lawrence served in the same group, “Hell’s Angels,” but in its <b>427th Squadron</b>.</p>
+    <p style="margin-bottom:0">The <b>327th Bomb Squadron</b>, sometimes linked with this story, belonged to a different group, the <b>92nd Bomb Group</b> (“Fame’s Favored Few”). No record of Lawrence E. Simon was found with that unit.</p>
+  </div>
+</section>
+
+<section class="sources">
+  <h2><svg class="star"><use href="#star"/></svg>Sources</h2>
+  <ol>
+    <li>303rd BG Association, George C. Newton Crew (427th BS): <a href="https://www.303rdbg.com/427newton2.html">https://www.303rdbg.com/427newton2.html</a></li>
+    <li>303rd BG personnel roster, R–S: <a href="https://www.303rdbg.com/rost-rs.html">https://www.303rdbg.com/rost-rs.html</a></li>
+    <li>303rd BG mission reports #234–#311, one PDF per mission: <a href="https://www.303rdbg.com/missionreports/234.pdf">https://www.303rdbg.com/missionreports/234.pdf</a> (and the same pattern for each mission number listed above)</li>
+    <li>Mission #273, Weisweiler, 16 Nov 1944: <a href="https://www.303rdbg.com/missionreports/273.pdf">https://www.303rdbg.com/missionreports/273.pdf</a></li>
+    <li>IWM American Air Museum, Newton crew photo UPL 31581: <a href="https://americanarchive.iwm.org.uk/archive/media/upl-31581">https://americanarchive.iwm.org.uk/archive/media/upl-31581</a></li>
+    <li>IWM American Air Museum, B-17 42-97281 “Queenie”: <a href="https://americanarchive.iwm.org.uk/archive/aircraft/42-97281">https://americanarchive.iwm.org.uk/archive/aircraft/42-97281</a></li>
+    <li>303rd BG, Queenie ground crew and nose art: <a href="https://www.303rdbg.com/gc-queenie.html">https://www.303rdbg.com/gc-queenie.html</a> · <a href="https://www.303rdbg.com/ground-nose.html">https://www.303rdbg.com/ground-nose.html</a></li>
+    <li>Air Force Historical Support Division, “Hell’s Angels” fact sheet: <a href="https://www.afhistory.af.mil/FAQs/Fact-Sheets/Article/1428701/hells-angels/">https://www.afhistory.af.mil/FAQs/Fact-Sheets/Article/1428701/hells-angels/</a></li>
+    <li>303rd BG, Mission #34 and “First to 25”: <a href="https://www.303rdbg.com/missionreports/034.pdf">https://www.303rdbg.com/missionreports/034.pdf</a> · <a href="https://www.303rdbg.com/first-to-25.html">https://www.303rdbg.com/first-to-25.html</a></li>
+    <li>327th Bombardment Squadron lineage (92nd BG): <a href="https://usafunithistory.com/PDF/0300/327%20BOMBARDMENT%20SQ.pdf">https://usafunithistory.com/PDF/0300/327%20BOMBARDMENT%20SQ.pdf</a></li>
+  </ol>
+</section>
+
+</div>
+<footer>★ &nbsp; THEY FLEW SO OTHERS MIGHT LIVE FREE &nbsp; ★</footer>
+</div>
+</body>
+</html>
